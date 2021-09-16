@@ -1,3 +1,5 @@
-# vue-synbh8
+# Resume Builder
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vue-synbh8)
+This is Resume Builder, where you can choose from any resume template and can edit every single detail of it.
+
+### Development in progress

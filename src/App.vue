@@ -14,9 +14,11 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap');
+
 :root{
   --font: 'Montserrat', sans-serif;
+  --font_roboto: 'Roboto', sans-serif;
 }
 
 *{

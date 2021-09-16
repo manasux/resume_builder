@@ -14,6 +14,11 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+:root{
+  --font: 'Montserrat', sans-serif;
+}
+
 *{
   margin: 0;
   padding: 0;

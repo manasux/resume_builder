@@ -17,7 +17,7 @@ export default{
 
 <style scoped>
 .overview{
-  width: 70%;
+  width: 80%;
   height: auto;
   margin-left: 10px;
   margin-top: 20px

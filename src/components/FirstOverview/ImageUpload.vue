@@ -17,14 +17,20 @@ export default{
 
 <style>
 .imageuploader {
-  width: 20%;
+  width: 30%;
   height: auto;
-  margin-left: 10px;
-  margin-top: 20px
+  margin-left: 20px;
+  margin-top: 20px;
+  /* float: right; */
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 .image_desc > img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
+  /* vertical-align: middle; */
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 1px solid #333e50;
 }
 </style>

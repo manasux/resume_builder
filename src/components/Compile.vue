@@ -28,4 +28,7 @@ export default{
     width: 50vw;
     height: 100vh;
   }
+  .first_overview{
+    display: flex;
+  }
 </style>

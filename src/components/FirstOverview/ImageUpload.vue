@@ -9,7 +9,7 @@
 <script>
 export default{
   components: {
-
+    
   },
 }
 
@@ -17,13 +17,13 @@ export default{
 
 <style>
 .imageuploader {
-  width: 30%;
+  width: 40%;
   height: auto;
   margin-left: 20px;
   margin-top: 20px;
   /* float: right; */
   display: flex;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
 }
 .image_desc > img {
@@ -31,6 +31,6 @@ export default{
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  border: 1px solid #333e50;
+  border: 2px solid #333e50;
 }
 </style>

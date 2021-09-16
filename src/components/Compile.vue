@@ -1,9 +1,17 @@
 <template>  
   <div class="resume_template">
+  <!-- Header -->
     <Header></Header>
+    <!-- First Overview -->
     <div class="first_overview">
+      <!-- Overview -->
       <Overview></Overview>
+      <!-- image upload -->
       <ImageUpload></ImageUpload>
+    </div>
+    <hr>
+    <div class="bottom">
+      <Experience></Experience>
     </div>
   </div>
 </template>
@@ -12,18 +20,23 @@
 import Header from "./Header/Header.vue";
 import Overview from "./FirstOverview/Overview.vue";
 import ImageUpload from "./FirstOverview/ImageUpload.vue";
+import Experience from "./Second/Experience.vue";
 
 export default{
   components: {
     Header,
     Overview,
     ImageUpload,
+    Experience,
   },
 }
 
 </script>
 
 <style>
+hr{
+  margin-top: 10px;
+}
   .resume_template {
     width: 50vw;
     height: 100vh;

@@ -17,13 +17,17 @@ export default{
 
 <style scoped>
 .overview{
-  width: 80%;
+  width: 60%;
   height: auto;
   margin-left: 10px;
-  margin-top: 20px
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .overview_desc {
   font-family: var(--font_roboto);
   font-size: 13px;
+  line-height: 22px;
 }
 </style>

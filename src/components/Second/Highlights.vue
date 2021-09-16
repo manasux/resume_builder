@@ -1,10 +1,11 @@
 <template>
-  <div class="experience">
-    <div class="experience_title">
-      <span>Experiences</span>
+  <div class="highlights">
+    <div class="highlights_title">
+      <span>Highlights</span>
     </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -12,16 +13,16 @@ export default {
 }
 </script>
 
-<style>
-.experience{
+<style scoped>
+.highlights{
   height: auto;
   width: 70%;
   border-right: 1px solid #333; 
 }
-.experience_title { 
+.highlights_title { 
   margin-top: 30px;
   margin-left: 30px;
-  font-size: 30px;
+  font-size: 20px;
   font-family: var(--font);
   color: #cb570c;
 }

@@ -12,6 +12,7 @@
     <hr>
     <div class="bottom">
       <Experience></Experience>
+      <Highlights></Highlights>
     </div>
   </div>
 </template>
@@ -21,6 +22,7 @@ import Header from "./Header/Header.vue";
 import Overview from "./FirstOverview/Overview.vue";
 import ImageUpload from "./FirstOverview/ImageUpload.vue";
 import Experience from "./Second/Experience.vue";
+import Highlights from "./Second/Highlights.vue";
 
 export default{
   components: {
@@ -28,6 +30,7 @@ export default{
     Overview,
     ImageUpload,
     Experience,
+    Highlights,
   },
 }
 
@@ -42,6 +45,9 @@ hr{
     height: 100vh;
   }
   .first_overview{
+    display: flex;
+  }
+  .bottom{
     display: flex;
   }
 </style>

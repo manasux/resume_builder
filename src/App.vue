@@ -1,13 +1,14 @@
 <template>
   <div class="main_body">
-    <h1>Hello</h1>
+    <Compile></Compile>
   </div>
 </template>
 
 <script>
-import compile from "./components/compile.vue"
+import Compile from "./components/Compile.vue"
 export default {
   components: {
+    Compile,
   }
 }
 </script>

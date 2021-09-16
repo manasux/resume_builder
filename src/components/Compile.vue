@@ -1,5 +1,7 @@
 <template>  
-
+  <div class="resume_template">
+    <Header></Header>
+  </div>
 </template>
 
 <script>
@@ -13,5 +15,8 @@ export default{
 </script>
 
 <style>
-
+  .resume_template {
+    width: 50vw;
+    height: 100vh;
+  }
 </style>

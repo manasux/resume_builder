@@ -21,7 +21,7 @@ export default {
 .experience_title { 
   margin-top: 30px;
   margin-left: 30px;
-  font-size: 30px;
+  font-size: 28px;
   font-family: var(--font);
   color: #cb570c;
 }

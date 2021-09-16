@@ -17,7 +17,6 @@ export default {
 .highlights{
   height: auto;
   width: 70%;
-  border-right: 1px solid #333; 
 }
 .highlights_title { 
   margin-top: 30px;

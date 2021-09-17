@@ -29,6 +29,13 @@ export default {
   box-sizing: border-box;
   /* overflow-x: hidden; */
 }
+body {
+  overflow-x: hidden;
+}
+#app {
+  width: 100vw;
+  height: 100%;
+}
 .main_body {
   height: 100%;
   width: 100%;

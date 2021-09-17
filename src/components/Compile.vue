@@ -5,7 +5,9 @@
   <div class="main_template">
     <div class="resume_template">
       <!-- Header -->
-      <Header></Header>
+      <div class="header_resume">
+        <Header></Header>
+      </div>
       <!-- First Overview -->
       <div class="first_overview">
         <!-- Overview -->
@@ -24,6 +26,9 @@
       </div>
     </div>
   </div>
+  <div class="main_footer">
+    <FooterPart></FooterPart>
+  </div>
 </template>
 
 <script>
@@ -35,6 +40,7 @@ import Highlights from './Second/Highlights.vue';
 import Education from './Second/Education.vue';
 import Hobbies from './Second/Hobbies.vue';
 import HeaderPart from './UI/HeaderPart.vue';
+import FooterPart from './UI/FooterPart.vue';
 
 export default {
   components: {
@@ -46,22 +52,24 @@ export default {
     Education,
     Hobbies,
     HeaderPart,
+    FooterPart,
   },
 };
 </script>
 
-<style>
+<style scoped>
 hr {
   margin-top: 10px;
 }
 .main_template {
   width: 50vw;
-  height: 100vh;
+  height: 80%;
 }
 .resume_template {
   width: 100%;
   height: 100%;
   margin: 20px;
+  border: 0.5px solid #333;
 }
 .first_overview {
   display: flex;
@@ -71,5 +79,8 @@ hr {
 }
 .second_part {
   width: 40%;
+}
+.header_resume {
+  height: 50%;
 }
 </style>

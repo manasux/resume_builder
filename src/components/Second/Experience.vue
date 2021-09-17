@@ -6,9 +6,33 @@
     </div>
     <!-- Experience Description -->
     <div class="experience_desc">
+      <!-- Experience Description title -->
       <div class="experience_desc_title">
-        <span>LearnCodeOnline</span>
+        <span>OzoneAI</span>
       </div>
+      <!-- Experience Description role -->
+      <div class="experience_desc_date">
+        <span class="start_date">Apr 2019 - </span>
+        <span class="end_date">Present</span>
+      </div>
+      <!-- Experience Description role -->
+      <div class="experience_desc_role">
+        <span>ML Engineer</span>
+      </div>
+    </div>
+    <!-- Experience todo points -->
+    <div class="experience_todo_points">
+      <ul class="experience_todo_ul">
+        <li>
+          Utilized PySpark to distribute data processing on large streaming
+          datasets to improve ingestion and processing speed of that daat by 87%
+        </li>
+        <li>
+          Build basic ETL that ingested transactional and event data from a web
+          app with 10,000 daily active users that saved over $85,000 annually in
+          external vendor costs%
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -31,12 +55,34 @@ export default {};
   color: #cb570c;
 }
 .experience_desc {
-  width: 100%;
   margin-top: 10px;
   margin-left: 30px;
 }
 .experience_desc_title > span {
   font-family: var(--font_sans);
   font-weight: 600;
+  font-size: 20px;
+}
+.experience_desc_role > span {
+  font-family: var(--font_sans);
+  font-weight: 600;
+  font-size: 15px;
+  color: #888;
+}
+.experience_desc_date > span {
+  font-family: var(--font_sans);
+  font-weight: 600;
+  font-size: 15px;
+  color: #888;
+}
+.experience_todo_points {
+  margin-top: 20px;
+  margin-left: 45px;
+  margin-right: 10px;
+}
+.experience_todo_ul > li {
+  font-family: var(--font_sans);
+  font-size: 15px;
+  line-height: 25px;
 }
 </style>

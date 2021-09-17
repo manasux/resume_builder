@@ -6,19 +6,16 @@
   </div>
 </template>
 
-
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style scoped>
-.highlights{
+.highlights {
   height: auto;
-  width: 70%;
+  width: 40%;
 }
-.highlights_title { 
+.highlights_title {
   margin-top: 30px;
   margin-left: 30px;
   font-size: 20px;

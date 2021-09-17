@@ -1,4 +1,7 @@
 <template>
+  <div class="main_header">
+    <HeaderPart></HeaderPart>
+  </div>
   <div class="main_template">
     <div class="resume_template">
       <!-- Header -->
@@ -31,6 +34,7 @@ import Experience from './Second/Experience.vue';
 import Highlights from './Second/Highlights.vue';
 import Education from './Second/Education.vue';
 import Hobbies from './Second/Hobbies.vue';
+import HeaderPart from './UI/HeaderPart.vue';
 
 export default {
   components: {
@@ -41,6 +45,7 @@ export default {
     Highlights,
     Education,
     Hobbies,
+    HeaderPart,
   },
 };
 </script>

@@ -50,7 +50,7 @@ export default {};
 .experience_title {
   margin-top: 30px;
   margin-left: 30px;
-  font-size: 28px;
+  font-size: 20px;
   font-family: var(--font);
   color: #cb570c;
 }
@@ -61,28 +61,29 @@ export default {};
 .experience_desc_title > span {
   font-family: var(--font_sans);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
 }
 .experience_desc_role > span {
   font-family: var(--font_sans);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   color: #888;
 }
 .experience_desc_date > span {
   font-family: var(--font_sans);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   color: #888;
 }
 .experience_todo_points {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 45px;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 .experience_todo_ul > li {
   font-family: var(--font_sans);
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 5px;
 }
 </style>

@@ -2,30 +2,36 @@
   <div class="main_header">
     <HeaderPart></HeaderPart>
   </div>
-  <div class="main_template">
-    <div class="resume_template">
-      <!-- Header -->
-      <div class="header_resume">
-        <Header></Header>
-      </div>
-      <!-- First Overview -->
-      <div class="first_overview">
-        <!-- Overview -->
-        <Overview></Overview>
-        <!-- image upload -->
-        <ImageUpload></ImageUpload>
-      </div>
-      <hr />
-      <div class="bottom">
-        <Experience></Experience>
-        <div class="second_part">
-          <Highlights></Highlights>
-          <Education></Education>
-          <Hobbies></Hobbies>
+  <div class="main_body">
+    <div class="main_template">
+      <div class="resume_template">
+        <!-- Header -->
+        <div class="header_resume">
+          <Header></Header>
+        </div>
+        <!-- First Overview -->
+        <div class="first_overview">
+          <!-- Overview -->
+          <Overview></Overview>
+          <!-- image upload -->
+          <ImageUpload></ImageUpload>
+        </div>
+        <hr />
+        <div class="bottom">
+          <Experience></Experience>
+          <div class="second_part">
+            <Highlights></Highlights>
+            <Education></Education>
+            <Hobbies></Hobbies>
+          </div>
         </div>
       </div>
     </div>
+    <div class="main_input">
+      <FooterPart></FooterPart>
+    </div>
   </div>
+
   <div class="main_footer">
     <FooterPart></FooterPart>
   </div>
@@ -62,6 +68,10 @@ hr {
   margin-top: 10px;
 }
 .main_template {
+  width: 50vw;
+  height: 80%;
+}
+.main_input {
   width: 50vw;
   height: 80%;
 }

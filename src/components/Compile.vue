@@ -14,6 +14,7 @@
       <Experience></Experience>
       <div class="second_part">
         <Highlights></Highlights>
+        <Education></Education>
       </div>
     </div>
   </div>
@@ -34,6 +35,7 @@ export default {
     ImageUpload,
     Experience,
     Highlights,
+    Education,
   },
 };
 </script>

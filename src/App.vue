@@ -27,9 +27,10 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* overflow-x: hidden; */
 }
 .main_body {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 </style>

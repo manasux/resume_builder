@@ -37,7 +37,7 @@ export default {};
   color: #cb570c;
 }
 .heighlights_desc {
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 30px;
   font-family: var(--font_sans);
 }

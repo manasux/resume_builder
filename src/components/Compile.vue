@@ -15,6 +15,7 @@
       <div class="second_part">
         <Highlights></Highlights>
         <Education></Education>
+        <Hobbies></Hobbies>
       </div>
     </div>
   </div>
@@ -27,6 +28,7 @@ import ImageUpload from './FirstOverview/ImageUpload.vue';
 import Experience from './Second/Experience.vue';
 import Highlights from './Second/Highlights.vue';
 import Education from './Second/Education.vue';
+import Hobbies from './Second/Hobbies.vue';
 
 export default {
   components: {
@@ -36,6 +38,7 @@ export default {
     Experience,
     Highlights,
     Education,
+    Hobbies,
   },
 };
 </script>

@@ -33,4 +33,23 @@ export default {};
 .buttons {
   margin-right: 100px;
 }
+.btn {
+  margin-right: 30px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  height: 35px;
+  border-radius: 3px;
+  font-family: var(--font_sans);
+  font-size: 15px;
+  transition: transform 0.3s ease;
+}
+.btn_reset {
+  background: none;
+  color: white;
+  border: 2px dashed white;
+}
+.btn:hover {
+  transform: translateY(10%);
+}
 </style>

@@ -1,6 +1,6 @@
-<template>  
+<template>
   <div class="resume_template">
-  <!-- Header -->
+    <!-- Header -->
     <Header></Header>
     <!-- First Overview -->
     <div class="first_overview">
@@ -9,22 +9,25 @@
       <!-- image upload -->
       <ImageUpload></ImageUpload>
     </div>
-    <hr>
+    <hr />
     <div class="bottom">
       <Experience></Experience>
-      <Highlights></Highlights>
+      <div class="second_part">
+        <Highlights></Highlights>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Header from "./Header/Header.vue";
-import Overview from "./FirstOverview/Overview.vue";
-import ImageUpload from "./FirstOverview/ImageUpload.vue";
-import Experience from "./Second/Experience.vue";
-import Highlights from "./Second/Highlights.vue";
+import Header from './Header/Header.vue';
+import Overview from './FirstOverview/Overview.vue';
+import ImageUpload from './FirstOverview/ImageUpload.vue';
+import Experience from './Second/Experience.vue';
+import Highlights from './Second/Highlights.vue';
+import Education from './Second/Education.vue';
 
-export default{
+export default {
   components: {
     Header,
     Overview,
@@ -32,22 +35,24 @@ export default{
     Experience,
     Highlights,
   },
-}
-
+};
 </script>
 
 <style>
-hr{
+hr {
   margin-top: 10px;
 }
-  .resume_template {
-    width: 50vw;
-    height: 100vh;
-  }
-  .first_overview{
-    display: flex;
-  }
-  .bottom{
-    display: flex;
-  }
+.resume_template {
+  width: 50vw;
+  height: 100vh;
+}
+.first_overview {
+  display: flex;
+}
+.bottom {
+  display: flex;
+}
+.second_part {
+  width: 40%;
+}
 </style>

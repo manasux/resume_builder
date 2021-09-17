@@ -27,7 +27,7 @@ export default {};
 <style scoped>
 .highlights {
   height: auto;
-  width: 40%;
+  width: 100%;
 }
 .highlights_title {
   margin-top: 30px;

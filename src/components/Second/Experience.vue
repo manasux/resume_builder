@@ -19,21 +19,51 @@
       <div class="experience_desc_role">
         <span>ML Engineer</span>
       </div>
+      <div class="experience_todo_points">
+        <ul class="experience_todo_ul">
+          <li>
+            Utilized PySpark to distribute data processing on large streaming
+            datasets to improve ingestion and processing speed of that daat by
+            87%
+          </li>
+          <li>
+            Build basic ETL that ingested transactional and event data from a
+            web app with 10,000 daily active users that saved over $85,000
+            annually in external vendor costs%
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="experience_desc">
+      <!-- Experience Description title -->
+      <div class="experience_desc_title">
+        <span>OzoneAI</span>
+      </div>
+      <!-- Experience Description role -->
+      <div class="experience_desc_date">
+        <span class="start_date">Apr 2019 - </span>
+        <span class="end_date">Present</span>
+      </div>
+      <!-- Experience Description role -->
+      <div class="experience_desc_role">
+        <span>ML Engineer</span>
+      </div>
+      <div class="experience_todo_points">
+        <ul class="experience_todo_ul">
+          <li>
+            Utilized PySpark to distribute data processing on large streaming
+            datasets to improve ingestion and processing speed of that daat by
+            87%
+          </li>
+          <li>
+            Build basic ETL that ingested transactional and event data from a
+            web app with 10,000 daily active users that saved over $85,000
+            annually in external vendor costs%
+          </li>
+        </ul>
+      </div>
     </div>
     <!-- Experience todo points -->
-    <div class="experience_todo_points">
-      <ul class="experience_todo_ul">
-        <li>
-          Utilized PySpark to distribute data processing on large streaming
-          datasets to improve ingestion and processing speed of that daat by 87%
-        </li>
-        <li>
-          Build basic ETL that ingested transactional and event data from a web
-          app with 10,000 daily active users that saved over $85,000 annually in
-          external vendor costs%
-        </li>
-      </ul>
-    </div>
   </div>
 </template>
 

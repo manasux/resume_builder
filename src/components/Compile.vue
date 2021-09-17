@@ -1,21 +1,23 @@
 <template>
-  <div class="resume_template">
-    <!-- Header -->
-    <Header></Header>
-    <!-- First Overview -->
-    <div class="first_overview">
-      <!-- Overview -->
-      <Overview></Overview>
-      <!-- image upload -->
-      <ImageUpload></ImageUpload>
-    </div>
-    <hr />
-    <div class="bottom">
-      <Experience></Experience>
-      <div class="second_part">
-        <Highlights></Highlights>
-        <Education></Education>
-        <Hobbies></Hobbies>
+  <div class="main_template">
+    <div class="resume_template">
+      <!-- Header -->
+      <Header></Header>
+      <!-- First Overview -->
+      <div class="first_overview">
+        <!-- Overview -->
+        <Overview></Overview>
+        <!-- image upload -->
+        <ImageUpload></ImageUpload>
+      </div>
+      <hr />
+      <div class="bottom">
+        <Experience></Experience>
+        <div class="second_part">
+          <Highlights></Highlights>
+          <Education></Education>
+          <Hobbies></Hobbies>
+        </div>
       </div>
     </div>
   </div>
@@ -47,9 +49,14 @@ export default {
 hr {
   margin-top: 10px;
 }
-.resume_template {
+.main_template {
   width: 50vw;
   height: 100vh;
+}
+.resume_template {
+  width: 100%;
+  height: 100%;
+  margin: 20px;
 }
 .first_overview {
   display: flex;

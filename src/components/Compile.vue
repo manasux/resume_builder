@@ -30,9 +30,6 @@
         </div>
       </div>
     </div>
-    <div class="main_input">
-      <HeaderInput></HeaderInput>
-    </div>
   </div>
 
   <div class="main_footer">
@@ -50,7 +47,7 @@ import Education from './Second/Education.vue';
 import Hobbies from './Second/Hobbies.vue';
 import HeaderPart from './UI/HeaderPart.vue';
 import FooterPart from './UI/FooterPart.vue';
-import HeaderInput from './Input/HeaderInput.vue';
+// import HeaderInput from './Input/HeaderInput.vue';
 
 export default {
   components: {
@@ -63,7 +60,7 @@ export default {
     Hobbies,
     HeaderPart,
     FooterPart,
-    HeaderInput,
+    // HeaderInput,
   },
 };
 </script>
@@ -97,9 +94,5 @@ hr {
 }
 .main_body_template {
   display: flex;
-}
-.main_input {
-  height: auto;
-  width: 50vw;
 }
 </style>

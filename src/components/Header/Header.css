@@ -1,0 +1,28 @@
+.header {
+  width: 100%;
+  height: 25%;
+  background-color: #333e50;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  color: white;
+  font-family: var(--font);
+  font-size: 35px;
+}
+.name_first {
+  color: #cb570c;
+}
+.phone_number {
+  color: #fff;
+  font-size: 15px;
+  font-family: var(--font_roboto);
+}
+.email_desc {
+  color: #fff;
+  font-family: var(--font_roboto);
+}

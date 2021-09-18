@@ -1,11 +1,12 @@
 <template>
+  <!-- Main header -->
   <div class="main_header">
     <HeaderPart></HeaderPart>
   </div>
-  <div class="main_body">
+  <div class="main_body_template">
     <div class="main_template">
       <div class="resume_template">
-        <!-- Header -->
+        <!-- Header Resume-->
         <div class="header_resume">
           <Header></Header>
         </div>
@@ -17,8 +18,10 @@
           <ImageUpload></ImageUpload>
         </div>
         <hr />
+        <!-- resume details -->
         <div class="bottom">
           <Experience></Experience>
+          <!-- Right side of resume details -->
           <div class="second_part">
             <Highlights></Highlights>
             <Education></Education>
@@ -28,7 +31,7 @@
       </div>
     </div>
     <div class="main_input">
-      <FooterPart></FooterPart>
+      <HeaderInput></HeaderInput>
     </div>
   </div>
 
@@ -47,6 +50,7 @@ import Education from './Second/Education.vue';
 import Hobbies from './Second/Hobbies.vue';
 import HeaderPart from './UI/HeaderPart.vue';
 import FooterPart from './UI/FooterPart.vue';
+import HeaderInput from './Input/HeaderInput.vue';
 
 export default {
   components: {
@@ -59,6 +63,7 @@ export default {
     Hobbies,
     HeaderPart,
     FooterPart,
+    HeaderInput,
   },
 };
 </script>
@@ -71,10 +76,7 @@ hr {
   width: 50vw;
   height: 80%;
 }
-.main_input {
-  width: 50vw;
-  height: 80%;
-}
+
 .resume_template {
   width: 100%;
   height: 100%;
@@ -92,5 +94,12 @@ hr {
 }
 .header_resume {
   height: 50%;
+}
+.main_body_template {
+  display: flex;
+}
+.main_input {
+  height: auto;
+  width: 50vw;
 }
 </style>

@@ -3,9 +3,14 @@
     <!-- Input Header -->
     <div class="input_header">
       <!-- Input Name -->
-      <div class="input_name flex_input">
+      <div class="input_name_div flex_input">
         <label for="name">Name</label>
-        <input type="text" class="" name="name" />
+        <input
+          type="text"
+          class="name_input"
+          name="name"
+          v-model="resume_name"
+        />
       </div>
     </div>
   </div>
@@ -13,11 +18,11 @@
 
 <script>
 export default {
-  // data() {
-  //   return {
-  //     name: 'Manas',
-  //   };
-  // },
+  data() {
+    return {
+      resume_name: 'Manas',
+    };
+  },
 };
 </script>
 

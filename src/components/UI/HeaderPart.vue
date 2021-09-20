@@ -9,13 +9,19 @@
     </div>
     <div class="buttons">
       <button class="btn btn_reset">Reset</button>
-      <button class="btn btn_download">Download</button>
+      <button @click="downloadPdf()" class="btn btn_download">Download</button>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    downloadPdf() {
+      this.$emit('downloadtopdf');
+    },
+  },
+};
 </script>
 
 <style scoped>

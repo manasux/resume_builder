@@ -2,10 +2,10 @@
   <div class="experience">
     <!-- Experience Title -->
     <div class="experience_title">
-      <span>Experiences</span>
+      <span contenteditable="true">Experiences</span>
     </div>
     <!-- Experience Description -->
-    <div class="experience_desc">
+    <div class="experience_desc" contenteditable="true">
       <!-- Experience Description title -->
       <div class="experience_desc_title">
         <span>OzoneAI</span>
@@ -34,7 +34,7 @@
         </ul>
       </div>
     </div>
-    <div class="experience_desc">
+    <div class="experience_desc" contenteditable="true">
       <!-- Experience Description title -->
       <div class="experience_desc_title">
         <span>OzoneAI</span>

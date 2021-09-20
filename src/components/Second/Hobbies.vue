@@ -2,12 +2,12 @@
   <div class="hobbies">
     <!-- Education Title -->
     <div class="hobbies_title">
-      <span>Hobbies</span>
+      <span contenteditable="true">Hobbies</span>
     </div>
     <!-- Hobbies Description -->
     <div class="hobbies_desc">
       <ul class="hobbies_desc_ul">
-        <li>Playing Chess</li>
+        <li contenteditable="true">Playing Chess</li>
         <li>Reading books</li>
         <li>Listening Music</li>
       </ul>

@@ -2,12 +2,12 @@
   <div class="highlights">
     <!-- Highlights Title -->
     <div class="highlights_title">
-      <span>Highlights</span>
+      <span contenteditable="true">Highlights</span>
     </div>
     <!-- Highlights Description -->
     <div class="heighlights_desc">
       <ul class="heighlights_desc_ul">
-        <li>Result Oriented</li>
+        <li contenteditable="true">Result Oriented</li>
         <li>Revenue Generation</li>
         <li>Business Development</li>
         <li>Effective Marketing</li>

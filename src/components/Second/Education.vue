@@ -2,12 +2,12 @@
   <div class="education">
     <!-- Education Title -->
     <div class="education_title">
-      <span>Education</span>
+      <span contenteditable="true">Education</span>
     </div>
     <!-- Education Description -->
     <div class="education_desc">
       <ul class="education_desc_ul">
-        <li>
+        <li contenteditable="true">
           <span class="education_desc_degree_name">Bachelor of Science,</span>
           <br />
           <span class="education_desc_course_name">Automotive Technology,</span>

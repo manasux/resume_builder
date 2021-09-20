@@ -1,31 +1,33 @@
 <template>
   <!-- Main header -->
+
   <div class="main_header">
-    <HeaderPart></HeaderPart>
+    <HeaderPart @downloadtopdf="changeT()"></HeaderPart>
   </div>
-  <div class="main_body_template">
-    <div class="main_template">
-      <div class="resume_template">
-        <!-- Header Resume-->
-        <div class="header_resume">
-          <Header></Header>
-        </div>
-        <!-- First Overview -->
-        <div class="first_overview">
-          <!-- Overview -->
-          <Overview></Overview>
-          <!-- image upload -->
-          <ImageUpload></ImageUpload>
-        </div>
-        <hr />
-        <!-- resume details -->
-        <div class="bottom">
-          <Experience></Experience>
-          <!-- Right side of resume details -->
-          <div class="second_part">
-            <Highlights></Highlights>
-            <Education></Education>
-            <Hobbies></Hobbies>
+
+  <div>
+    <div class="main_body_template">
+      <div class="main_template">
+        <div class="resume_template" id="convert">
+          <!-- Header Resume-->
+          <div class="header_resume">
+            <Header></Header>
+          </div>
+          <!-- First Overview -->
+          <div class="first_overview">
+            <!-- Overview -->
+            <Overview></Overview>
+          </div>
+          <hr />
+          <!-- resume details -->
+          <div class="bottom">
+            <Experience></Experience>
+            <!-- Right side of resume details -->
+            <div class="second_part">
+              <Highlights></Highlights>
+              <Education></Education>
+              <Hobbies></Hobbies>
+            </div>
           </div>
         </div>
       </div>
@@ -40,7 +42,7 @@
 <script>
 import Header from './Header/Header.vue';
 import Overview from './FirstOverview/Overview.vue';
-import ImageUpload from './FirstOverview/ImageUpload.vue';
+// import ImageUpload from './FirstOverview/ImageUpload.vue';
 import Experience from './Second/Experience.vue';
 import Highlights from './Second/Highlights.vue';
 import Education from './Second/Education.vue';
@@ -53,7 +55,7 @@ export default {
   components: {
     Header,
     Overview,
-    ImageUpload,
+    // ImageUpload,
     Experience,
     Highlights,
     Education,
@@ -61,6 +63,12 @@ export default {
     HeaderPart,
     FooterPart,
     // HeaderInput,
+  },
+  methods: {
+    changeT() {
+      var element = document.getElementById('convert');
+      html2pdf(element);
+    },
   },
 };
 </script>
@@ -94,5 +102,10 @@ hr {
 }
 .main_body_template {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#convert {
+  outline: none;
 }
 </style>

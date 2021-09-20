@@ -1,5 +1,5 @@
 <template>
-  <div class="main_body">
+  <div class="main_body" spellcheck="false">
     <Compile></Compile>
   </div>
 </template>

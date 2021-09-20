@@ -6,8 +6,8 @@
     </div>
     <!-- Education Description -->
     <div class="education_desc">
-      <ul class="education_desc_ul">
-        <li contenteditable="true">
+      <ul class="education_desc_ul" contenteditable="true">
+        <li>
           <span class="education_desc_degree_name">Bachelor of Science,</span>
           <br />
           <span class="education_desc_course_name">Automotive Technology,</span>

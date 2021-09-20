@@ -6,8 +6,8 @@
     </div>
     <!-- Highlights Description -->
     <div class="heighlights_desc">
-      <ul class="heighlights_desc_ul">
-        <li contenteditable="true">Result Oriented</li>
+      <ul class="heighlights_desc_ul" contenteditable="true">
+        <li>Result Oriented</li>
         <li>Revenue Generation</li>
         <li>Business Development</li>
         <li>Effective Marketing</li>

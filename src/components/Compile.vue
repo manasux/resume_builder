@@ -85,7 +85,7 @@ hr {
 .resume_template {
   width: 100%;
   height: 100%;
-  margin: 20px;
+
   border: 0.5px solid #333;
 }
 .first_overview {

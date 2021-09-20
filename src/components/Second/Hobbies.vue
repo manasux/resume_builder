@@ -6,8 +6,8 @@
     </div>
     <!-- Hobbies Description -->
     <div class="hobbies_desc">
-      <ul class="hobbies_desc_ul">
-        <li contenteditable="true">Playing Chess</li>
+      <ul class="hobbies_desc_ul" contenteditable="true">
+        <li>Playing Chess</li>
         <li>Reading books</li>
         <li>Listening Music</li>
       </ul>

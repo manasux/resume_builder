@@ -8,7 +8,7 @@
       />
     </div>
     <div class="buttons">
-      <button class="btn btn_reset">Reset</button>
+      <!-- <button class="btn btn_reset">Reset</button> -->
       <button @click="downloadPdf()" class="btn btn_download">Download</button>
     </div>
   </div>

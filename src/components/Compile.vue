@@ -46,8 +46,9 @@
       <FooterPart></FooterPart>
     </div>
   </div>
+
+  <!-- header_input -->
   <div class="main_resume_input" v-if="openChange == 1 && open">
-    <!-- header_input -->
     <div class="header_resume_input">
       <HeaderInput
         @inputeHeader="updateHeader"
@@ -55,8 +56,9 @@
       ></HeaderInput>
     </div>
   </div>
+
+  <!-- Overview input -->
   <div class="main_resume_input" v-if="openChange == 2 && open">
-    <!-- Overview input -->
     <div class="overview_resume_input">
       <OverviewInput
         @inputOverview="updateOverview"
@@ -111,21 +113,22 @@ export default {
       this.newName = var1;
       this.newContact = var2;
       this.newEmail = var3;
-      this.open = !this.open;
+      this.open = false;
     },
     closingInput() {
       this.open = false;
     },
     openHeader() {
-      this.open = !this.open;
       this.openChange = 1;
+      this.open = !this.open;
     },
     openOverview() {
       this.openChange = 2;
+      this.open = !this.open;
     },
     updateOverview(var1) {
       this.newOverview = var1;
-      this.open = !this.open;
+      this.open = false;
     },
   },
 };

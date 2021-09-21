@@ -3,12 +3,7 @@
     <!-- overview texfield -->
     <div class="flex_input overview_input">
       <label for="overview">Overview</label>
-      <textarea
-        name="overview"
-        cols="30"
-        rows="10"
-        v-model="overview_text"
-      ></textarea>
+      <input name="overview" cols="30" rows="10" v-model="overview_text" />
       <div class="btn_flex">
         <button class="btn submit_btn" @click="submit_overview()">
           Submit
@@ -21,6 +16,7 @@
 
 <script>
 export default {
+  emits: ['closeInput'],
   data() {
     return {
       overview_text:

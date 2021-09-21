@@ -34,7 +34,10 @@
       />
     </div>
     <!-- submit btn -->
-    <button class="btn submit_btn" @click="submit_header()">Submit</button>
+    <div class="btn_flex">
+      <button class="btn submit_btn" @click="submit_header()">Submit</button>
+      <button class="btn clear_btn" @click="close()">Close</button>
+    </div>
   </div>
 </template>
 
@@ -50,6 +53,9 @@ export default {
   methods: {
     submit_header() {
       this.$emit('inputeHeader', this.name, this.phone, this.email);
+    },
+    close() {
+      this.$emit('closeInput');
     },
   },
 };
@@ -81,5 +87,13 @@ label {
   color: #ffffff;
   font-size: 15px;
   font-family: var(--font_roboto);
+}
+.btn_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clear_btn {
+  margin-top: 30px;
 }
 </style>

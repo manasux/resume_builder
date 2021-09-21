@@ -45,7 +45,10 @@
   </div>
   <div class="main_resume_input" v-if="open">
     <div class="header_resume_input" v-if="openChange == 1">
-      <HeaderInput @inputeHeader="updateHeader"></HeaderInput>
+      <HeaderInput
+        @inputeHeader="updateHeader"
+        @closeInput="closingInput"
+      ></HeaderInput>
     </div>
   </div>
 </template>
@@ -92,6 +95,9 @@ export default {
       this.newContact = var2;
       this.newEmail = var3;
       this.open = !this.open;
+    },
+    closingInput() {
+      this.open = false;
     },
     openHeader() {
       this.open = !this.open;

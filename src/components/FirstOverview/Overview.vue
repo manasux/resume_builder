@@ -2,6 +2,9 @@
   <div class="overview">
     <span contenteditable="true" class="overview_desc">
       {{ overview }}
+      <div @click="edit_overview()" class="header_edit">
+        <button class="btn btn_change"><i class="fas fa-pen"></i></button>
+      </div>
     </span>
   </div>
 </template>
@@ -10,6 +13,11 @@
 export default {
   components: {
     props: ['overview'],
+  },
+  methods: {
+    edit_overview() {
+      this.$emit('openOverviewEdit');
+    },
   },
 };
 </script>

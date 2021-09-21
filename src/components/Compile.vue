@@ -21,7 +21,10 @@
             <!-- First Overview -->
             <div class="first_overview">
               <!-- Overview -->
-              <Overview :overview="newOverview"></Overview>
+              <Overview
+                @openOverviewEdit="openOverview"
+                :overview="newOverview"
+              ></Overview>
             </div>
             <hr />
             <!-- resume details -->
@@ -43,17 +46,22 @@
       <FooterPart></FooterPart>
     </div>
   </div>
-  <div class="main_resume_input" v-if="open">
+  <div class="main_resume_input" v-if="openChange == 1 && open">
     <!-- header_input -->
-    <div class="header_resume_input" v-if="openChange == 1">
+    <div class="header_resume_input">
       <HeaderInput
         @inputeHeader="updateHeader"
         @closeInput="closingInput"
       ></HeaderInput>
     </div>
+  </div>
+  <div class="main_resume_input" v-if="openChange == 2 && open">
     <!-- Overview input -->
     <div class="overview_resume_input">
-      <OverviewInput @inputOverview="updateOverview"></OverviewInput>
+      <OverviewInput
+        @inputOverview="updateOverview"
+        @closeInput="closingInput"
+      ></OverviewInput>
     </div>
   </div>
 </template>
@@ -112,8 +120,12 @@ export default {
       this.open = !this.open;
       this.openChange = 1;
     },
+    openOverview() {
+      this.openChange = 2;
+    },
     updateOverview(var1) {
       this.newOverview = var1;
+      this.open = !this.open;
     },
   },
 };

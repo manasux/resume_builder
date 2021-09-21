@@ -12,6 +12,7 @@
             <!-- Header Resume-->
             <div class="header_resume">
               <Header
+                @openHeaderEdit="openHeader"
                 :name="newName"
                 :contact="newContact"
                 :email="newEmail"
@@ -42,8 +43,8 @@
       <FooterPart></FooterPart>
     </div>
   </div>
-  <div class="main_resume_input">
-    <div class="header_resume_input">
+  <div class="main_resume_input" v-if="open">
+    <div class="header_resume_input" v-if="openChange == 1">
       <HeaderInput @inputeHeader="updateHeader"></HeaderInput>
     </div>
   </div>
@@ -74,9 +75,11 @@ export default {
   },
   data() {
     return {
-      newName: '',
-      newContact: '',
-      newEmail: '',
+      newName: 'Manas Mishra',
+      newContact: '6202286832',
+      newEmail: 'mk1316a@gmail.com',
+      openChange: 0,
+      open: false,
     };
   },
   methods: {
@@ -88,6 +91,11 @@ export default {
       this.newName = var1;
       this.newContact = var2;
       this.newEmail = var3;
+      this.open = !this.open;
+    },
+    openHeader() {
+      this.open = !this.open;
+      this.openChange = 1;
     },
   },
 };
@@ -96,6 +104,10 @@ export default {
 <style scoped>
 hr {
   margin-top: 10px;
+}
+.main_resume_template {
+  width: 100vw;
+  height: auto;
 }
 .main_template {
   width: 50vw;
@@ -134,7 +146,7 @@ hr {
   align-items: center;
   transform: translateY(-90vh);
   /* background: lightcoral; */
-  height: 50vh;
+  height: 60vh;
 }
 .header_resume_input {
   display: flex;
@@ -143,7 +155,7 @@ hr {
   border: 1px solid black;
   height: 100%;
   align-items: center;
-  background: lightcoral;
+  background: #001559;
   border-radius: 10px;
   opacity: 1;
 }

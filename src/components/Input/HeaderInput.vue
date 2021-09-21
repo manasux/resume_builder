@@ -1,19 +1,37 @@
 <template>
   <div class="header_input">
     <!-- Header Input Name -->
-    <div class="header_input_name">
+    <div class="header_input_name flex_input">
       <label for="username">Name:</label>
-      <input type="text" name="username" v-model="name" />
+      <input
+        type="text"
+        name="username"
+        class="change_input"
+        autocomplete="off"
+        v-model="name"
+      />
     </div>
     <!-- Header Input Number -->
-    <div class="header_input_phone">
+    <div class="header_input_phone flex_input">
       <label for="phoneno">Phone No.:</label>
-      <input type="number" name="phoneno" v-model="phone" />
+      <input
+        type="number"
+        name="phoneno"
+        class="change_input"
+        autocomplete="off"
+        v-model="phone"
+      />
     </div>
     <!-- Header Input Email -->
-    <div class="header_input_phone">
+    <div class="header_input_phone flex_input">
       <label for="email">Email:</label>
-      <input type="email" name="email" v-model="email" />
+      <input
+        type="email"
+        name="email"
+        class="change_input"
+        autocomplete="off"
+        v-model="email"
+      />
     </div>
     <!-- submit btn -->
     <button class="btn submit_btn" @click="submit_header()">Submit</button>
@@ -24,9 +42,9 @@
 export default {
   data() {
     return {
-      name: 'Manas Mishra',
-      phone: '6202286832',
-      email: 'mk1316a@gmail.com',
+      name: '',
+      phone: '',
+      email: '',
     };
   },
   methods: {
@@ -37,4 +55,31 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.flex_input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 30px;
+}
+.submit_btn {
+  margin-top: 30px;
+}
+label {
+  color: #fff;
+  font-size: 20px;
+  font-family: var(--font_sans);
+}
+.change_input {
+  width: 300px;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #eb23e1;
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: var(--font_roboto);
+}
+</style>

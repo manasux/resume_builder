@@ -3,6 +3,9 @@
     <!-- Name -->
     <div class="name">
       <span contenteditable="true" class="name_second"> {{ name }} </span>
+      <div @click="edit_name()" class="header_edit">
+        <button class="btn btn_change"><i class="fas fa-pen"></i></button>
+      </div>
     </div>
     <!-- phone number -->
     <div class="phone">
@@ -22,6 +25,11 @@
 <script>
 export default {
   props: ['name', 'contact', 'email'],
+  methods: {
+    edit_name() {
+      this.$emit('openHeaderEdit');
+    },
+  },
 };
 </script>
 
@@ -73,5 +81,21 @@ export default {
   color: #fff;
   font-size: 10px;
   cursor: pointer;
+}
+.header_edit {
+  transform: translateX(10px);
+}
+.header_edit > .btn_change > i {
+  font-size: 10px;
+  color: white;
+  transform: translateY(-5px);
+}
+.btn_change {
+  border: 1px solid black;
+  padding: 3px;
+  border-radius: 4px;
+  background: red;
+  width: 20px;
+  height: 20px;
 }
 </style>

@@ -21,7 +21,7 @@
             <!-- First Overview -->
             <div class="first_overview">
               <!-- Overview -->
-              <Overview></Overview>
+              <Overview :overview="newOverview"></Overview>
             </div>
             <hr />
             <!-- resume details -->
@@ -44,11 +44,16 @@
     </div>
   </div>
   <div class="main_resume_input" v-if="open">
+    <!-- header_input -->
     <div class="header_resume_input" v-if="openChange == 1">
       <HeaderInput
         @inputeHeader="updateHeader"
         @closeInput="closingInput"
       ></HeaderInput>
+    </div>
+    <!-- Overview input -->
+    <div class="overview_resume_input">
+      <OverviewInput @inputOverview="updateOverview"></OverviewInput>
     </div>
   </div>
 </template>
@@ -63,6 +68,7 @@ import Hobbies from './Second/Hobbies.vue';
 import HeaderPart from './UI/HeaderPart.vue';
 import FooterPart from './UI/FooterPart.vue';
 import HeaderInput from './Input/HeaderInput.vue';
+import OverviewInput from './Input/OverviewInput.vue';
 
 export default {
   components: {
@@ -75,12 +81,15 @@ export default {
     HeaderPart,
     FooterPart,
     HeaderInput,
+    OverviewInput,
   },
   data() {
     return {
       newName: 'Manas Mishra',
       newContact: '6202286832',
       newEmail: 'mk1316a@gmail.com',
+      newOverview:
+        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       openChange: 0,
       open: false,
     };
@@ -102,6 +111,9 @@ export default {
     openHeader() {
       this.open = !this.open;
       this.openChange = 1;
+    },
+    updateOverview(var1) {
+      this.newOverview = var1;
     },
   },
 };

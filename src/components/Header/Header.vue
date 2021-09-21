@@ -2,15 +2,17 @@
   <header class="header flex">
     <!-- Name -->
     <div class="name">
-      <span contenteditable="true" class="name_second"> Manas Mishra </span>
+      <span contenteditable="true" class="name_second"> {{ name }} </span>
     </div>
     <!-- phone number -->
     <div class="phone">
-      <span contenteditable="true" class="phone_number"> +91 6202286832 </span>
+      <span contenteditable="true" class="phone_number">
+        +91 {{ contact }}
+      </span>
     </div>
     <!-- Email -->
     <div class="email">
-      <span contenteditable="true" class="email_desc"> amr13mk@gmail.com </span>
+      <span contenteditable="true" class="email_desc"> {{ email }} </span>
     </div>
   </header>
 
@@ -18,7 +20,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ['name', 'contact', 'email'],
+};
 </script>
 
 <style>

@@ -1,73 +1,93 @@
 <template>
   <!-- Main header -->
+  <div class="main_resume_template">
+    <div class="main_header">
+      <HeaderPart @downloadtopdf="changeT()"></HeaderPart>
+    </div>
 
-  <div class="main_header">
-    <HeaderPart @downloadtopdf="changeT()"></HeaderPart>
-  </div>
-
-  <div>
-    <div class="main_body_template">
-      <div class="main_template">
-        <div class="resume_template" id="convert">
-          <!-- Header Resume-->
-          <div class="header_resume">
-            <Header></Header>
-          </div>
-          <!-- First Overview -->
-          <div class="first_overview">
-            <!-- Overview -->
-            <Overview></Overview>
-          </div>
-          <hr />
-          <!-- resume details -->
-          <div class="bottom">
-            <Experience></Experience>
-            <!-- Right side of resume details -->
-            <div class="second_part">
-              <Highlights></Highlights>
-              <Education></Education>
-              <Hobbies></Hobbies>
+    <div>
+      <div class="main_body_template">
+        <div class="main_template">
+          <div class="resume_template" id="convert">
+            <!-- Header Resume-->
+            <div class="header_resume">
+              <Header
+                :name="newName"
+                :contact="newContact"
+                :email="newEmail"
+              ></Header>
+            </div>
+            <!-- First Overview -->
+            <div class="first_overview">
+              <!-- Overview -->
+              <Overview></Overview>
+            </div>
+            <hr />
+            <!-- resume details -->
+            <div class="bottom">
+              <Experience></Experience>
+              <!-- Right side of resume details -->
+              <div class="second_part">
+                <Highlights></Highlights>
+                <Education></Education>
+                <Hobbies></Hobbies>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="main_footer">
-    <FooterPart></FooterPart>
+    <div class="main_footer">
+      <FooterPart></FooterPart>
+    </div>
+  </div>
+  <div class="main_resume_input">
+    <div class="header_resume_input">
+      <HeaderInput @inputeHeader="updateHeader"></HeaderInput>
+    </div>
   </div>
 </template>
 
 <script>
 import Header from './Header/Header.vue';
 import Overview from './FirstOverview/Overview.vue';
-// import ImageUpload from './FirstOverview/ImageUpload.vue';
 import Experience from './Second/Experience.vue';
 import Highlights from './Second/Highlights.vue';
 import Education from './Second/Education.vue';
 import Hobbies from './Second/Hobbies.vue';
 import HeaderPart from './UI/HeaderPart.vue';
 import FooterPart from './UI/FooterPart.vue';
-// import HeaderInput from './Input/HeaderInput.vue';
+import HeaderInput from './Input/HeaderInput.vue';
 
 export default {
   components: {
     Header,
     Overview,
-    // ImageUpload,
     Experience,
     Highlights,
     Education,
     Hobbies,
     HeaderPart,
     FooterPart,
-    // HeaderInput,
+    HeaderInput,
+  },
+  data() {
+    return {
+      newName: '',
+      newContact: '',
+      newEmail: '',
+    };
   },
   methods: {
     changeT() {
       var element = document.getElementById('convert');
       html2pdf(element);
+    },
+    updateHeader(var1, var2, var3) {
+      this.newName = var1;
+      this.newContact = var2;
+      this.newEmail = var3;
     },
   },
 };
@@ -107,5 +127,24 @@ hr {
 }
 #convert {
   outline: none;
+}
+.main_resume_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-90vh);
+  /* background: lightcoral; */
+  height: 50vh;
+}
+.header_resume_input {
+  display: flex;
+  justify-content: center;
+  width: 60vw;
+  border: 1px solid black;
+  height: 100%;
+  align-items: center;
+  background: lightcoral;
+  border-radius: 10px;
+  opacity: 1;
 }
 </style>

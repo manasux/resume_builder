@@ -1,74 +1,64 @@
 <template>
   <div class="experience">
-    <!-- Experience Title -->
-    <div class="experience_title">
-      <span contenteditable="true">Experiences</span>
-    </div>
-    <!-- Experience Description -->
-    <div class="experience_desc" contenteditable="true">
-      <!-- Experience Description title -->
-      <div class="experience_desc_title">
-        <span>OzoneAI</span>
-      </div>
-      <!-- Experience Description role -->
-      <div class="experience_desc_date">
-        <span class="start_date">Apr 2019 - </span>
-        <span class="end_date">Present</span>
-      </div>
-      <!-- Experience Description role -->
-      <div class="experience_desc_role">
-        <span>ML Engineer</span>
-      </div>
-      <div class="experience_todo_points">
-        <ul class="experience_todo_ul">
-          <li>
-            Utilized PySpark to distribute data processing on large streaming
-            datasets to improve ingestion and processing speed of that daat by
-            87%
-          </li>
-          <li>
-            Build basic ETL that ingested transactional and event data from a
-            web app with 10,000 daily active users that saved over $85,000
-            annually in external vendor costs%
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="experience_desc" contenteditable="true">
-      <!-- Experience Description title -->
-      <div class="experience_desc_title">
-        <span>OzoneAI</span>
-      </div>
-      <!-- Experience Description role -->
-      <div class="experience_desc_date">
-        <span class="start_date">Apr 2019 - </span>
-        <span class="end_date">Present</span>
-      </div>
-      <!-- Experience Description role -->
-      <div class="experience_desc_role">
-        <span>ML Engineer</span>
-      </div>
-      <div class="experience_todo_points">
-        <ul class="experience_todo_ul">
-          <li>
-            Utilized PySpark to distribute data processing on large streaming
-            datasets to improve ingestion and processing speed of that daat by
-            87%
-          </li>
-          <li>
-            Build basic ETL that ingested transactional and event data from a
-            web app with 10,000 daily active users that saved over $85,000
-            annually in external vendor costs%
-          </li>
-        </ul>
-      </div>
-    </div>
+    <ul>
+      <li class="experince_li">
+        <!-- Experience Title -->
+        <div class="experience_title">
+          <span>{{ experience_title_name }}</span>
+        </div>
+        <!-- Experience Description -->
+        <div class="experience_desc">
+          <!-- Experience Description title -->
+          <div class="experience_desc_title">
+            <span>
+              {{ experience_company_name }}
+            </span>
+          </div>
+          <!-- Experience Description role -->
+          <div class="experience_desc_date">
+            <span class="start_date"
+              >{{ start_month }} {{ start_year }} -
+            </span>
+            <span class="end_date">{{ end_month }} {{ end_year }}</span>
+          </div>
+          <!-- Experience Description role -->
+          <div class="experience_desc_role">
+            <span>ML Engineer</span>
+          </div>
+          <div class="experience_todo_points">
+            <ul class="experience_todo_ul">
+              <li>
+                Utilized PySpark to distribute data processing on large
+                streaming datasets to improve ingestion and processing speed of
+                that daat by 87%
+              </li>
+              <li>
+                Build basic ETL that ingested transactional and event data from
+                a web app with 10,000 daily active users that saved over $85,000
+                annually in external vendor costs%
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
     <!-- Experience todo points -->
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      experience_title_name: 'Experience',
+      experience_company_name: 'Ozone AI',
+      start_month: 'April',
+      start_year: '2019',
+      end_month: 'June',
+      end_year: '2009',
+    };
+  },
+};
 </script>
 
 <style>
@@ -76,6 +66,9 @@ export default {};
   height: auto;
   width: 70%;
   border-right: 1px solid #333;
+}
+.experince_li {
+  list-style: none;
 }
 .experience_title {
   margin-top: 30px;

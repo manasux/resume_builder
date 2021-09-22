@@ -1,6 +1,6 @@
 <template>
   <div class="overview">
-    <span contenteditable="true" class="overview_desc">
+    <span class="overview_desc">
       {{ overview }}
     </span>
   </div>
@@ -11,10 +11,8 @@
 
 <script>
 export default {
-  components: {
-    props: ['overview'],
-    emits: ['openOverviewEdit'],
-  },
+  props: ['overview'],
+  emits: ['openOverviewEdit'],
   methods: {
     edit_overview() {
       this.$emit('openOverviewEdit');

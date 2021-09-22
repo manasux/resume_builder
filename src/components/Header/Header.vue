@@ -2,24 +2,20 @@
   <header class="header flex">
     <!-- Name -->
     <div class="name">
-      <span contenteditable="true" class="name_second"> {{ name }} </span>
+      <span class="name_second"> {{ name }} </span>
       <div @click="edit_name()" class="header_edit">
         <button class="btn btn_change"><i class="fas fa-pen"></i></button>
       </div>
     </div>
     <!-- phone number -->
     <div class="phone">
-      <span contenteditable="true" class="phone_number">
-        +91 {{ contact }}
-      </span>
+      <span class="phone_number"> +91 {{ contact }} </span>
     </div>
     <!-- Email -->
     <div class="email">
-      <span contenteditable="true" class="email_desc"> {{ email }} </span>
+      <span class="email_desc"> {{ email }} </span>
     </div>
   </header>
-
-  <!-- ------------------------------------- -->
 </template>
 
 <script>

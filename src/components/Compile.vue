@@ -99,7 +99,7 @@ export default {
       newContact: '6202286832',
       newEmail: 'mk1316a@gmail.com',
       newOverview:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       openChange: 0,
       open: false,
     };
@@ -182,6 +182,17 @@ hr {
   height: 60vh;
 }
 .header_resume_input {
+  display: flex;
+  justify-content: center;
+  width: 60vw;
+  border: 1px solid black;
+  height: 100%;
+  align-items: center;
+  background: #001559;
+  border-radius: 10px;
+  opacity: 1;
+}
+.overview_resume_input {
   display: flex;
   justify-content: center;
   width: 60vw;

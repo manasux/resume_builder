@@ -3,7 +3,13 @@
     <!-- overview texfield -->
     <div class="flex_input overview_input">
       <label for="overview">Overview</label>
-      <input name="overview" cols="30" rows="10" v-model="overview_text" />
+      <textarea
+        name="overview"
+        cols="100"
+        rows="10"
+        class="textarea_overview"
+        v-model="overview_text"
+      ></textarea>
       <div class="btn_flex">
         <button class="btn submit_btn" @click="submit_overview()">
           Submit
@@ -34,4 +40,34 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.flex_input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 30px;
+}
+.submit_btn {
+  margin-top: 30px;
+}
+label {
+  color: #fff;
+  font-size: 20px;
+  font-family: var(--font_sans);
+}
+.textarea_overview {
+  background: inherit;
+  color: white;
+  font-family: var(--font_sans);
+  font-size: 15px;
+}
+.btn_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clear_btn {
+  margin-top: 30px;
+}
+</style>

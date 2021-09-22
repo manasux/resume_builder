@@ -29,7 +29,16 @@
             <hr />
             <!-- resume details -->
             <div class="bottom">
-              <Experience></Experience>
+              <Experience
+                :experienceTitleName="experience_title_name"
+                :experienceCompanyName="experience_company_name"
+                :startMonth="start_month"
+                :startYear="start_year"
+                :endYear="end_year"
+                :experienceRole="experience_role"
+                :experienceDescOne="experience_desc_one"
+                :experinceDescTwo="experience_desc_two"
+              ></Experience>
               <!-- Right side of resume details -->
               <div class="second_part">
                 <Highlights></Highlights>
@@ -100,6 +109,20 @@ export default {
       newEmail: 'mk1316a@gmail.com',
       newOverview:
         ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      // experince
+      experience_title_name: 'Experience',
+      experience_company_name: 'Ozone AI',
+      start_month: 'April',
+      start_year: '2019',
+      end_month: 'June',
+      end_year: '2009',
+      experience_role: 'ML Engineer',
+      experience_desc_one:
+        'Utilized PySpark to distribute data processing on large streaming datasets to improve ingestion and processing speed of that daat by 87%',
+      experience_desc_two:
+        'Build basic ETL that ingested transactional and event data from a web app with 10,000 daily active users that saved over $85,000 annually in external vendor costs',
+
+      // common
       openChange: 0,
       open: false,
     };

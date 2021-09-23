@@ -1,5 +1,10 @@
 <template>
   <div class="experience">
+    <!-- submit btn -->
+    <div @click="edit_exp()" class="header_edit">
+      <button class="btn btn_change"><i class="fas fa-pen"></i></button>
+    </div>
+    <!-- ------- -->
     <ul>
       <li class="experince_li">
         <!-- Experience Title -->
@@ -16,8 +21,8 @@
           </div>
           <!-- Experience Description role -->
           <div class="experience_desc_date">
-            <span class="start_date">{{ startMonth }} {{ startYear }} - </span>
-            <span class="end_date">{{ endMonth }} {{ endYear }}</span>
+            <span class="start_date">{{ startDate }} - </span>
+            <span class="end_date">{{ endDate }}</span>
           </div>
           <!-- Experience Description role -->
           <div class="experience_desc_role">
@@ -41,14 +46,17 @@ export default {
   props: [
     'experienceTitleName',
     'experienceCompanyName',
-    'startMonth',
-    'startYear',
-    'endMonth',
-    'endYear',
+    'startDate',
+    'endDate',
     'experienceRole',
     'experienceDescOne',
     'experinceDescTwo',
   ],
+  methods: {
+    edit_exp() {
+      this.$emit('openExpEdit');
+    },
+  },
 };
 </script>
 

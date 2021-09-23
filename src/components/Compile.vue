@@ -30,11 +30,11 @@
             <!-- resume details -->
             <div class="bottom">
               <Experience
+                @openExpEdit="openExperience"
                 :experienceTitleName="experience_title_name"
                 :experienceCompanyName="experience_company_name"
-                :startMonth="start_month"
-                :startYear="start_year"
-                :endYear="end_year"
+                :startDate="start_date"
+                :endDate="end_date"
                 :experienceRole="experience_role"
                 :experienceDescOne="experience_desc_one"
                 :experinceDescTwo="experience_desc_two"
@@ -75,6 +75,16 @@
       ></OverviewInput>
     </div>
   </div>
+
+  <!-- Experience input -->
+  <div class="main_resume_input" v-if="openChange == 3 && open">
+    <div class="overview_resume_input">
+      <ExperienceInput
+        @inputExp="updateExperience"
+        @closeInput="closingInput"
+      ></ExperienceInput>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -88,6 +98,7 @@ import HeaderPart from './UI/HeaderPart.vue';
 import FooterPart from './UI/FooterPart.vue';
 import HeaderInput from './Input/HeaderInput.vue';
 import OverviewInput from './Input/OverviewInput.vue';
+import ExperienceInput from './Input/ExperienceInput.vue';
 
 export default {
   components: {
@@ -101,6 +112,7 @@ export default {
     FooterPart,
     HeaderInput,
     OverviewInput,
+    ExperienceInput,
   },
   data() {
     return {
@@ -112,10 +124,8 @@ export default {
       // experince
       experience_title_name: 'Experience',
       experience_company_name: 'Ozone AI',
-      start_month: 'April',
-      start_year: '2019',
-      end_month: 'June',
-      end_year: '2009',
+      start_date: '7-8-2018',
+      end_date: '7-9-2018',
       experience_role: 'ML Engineer',
       experience_desc_one:
         'Utilized PySpark to distribute data processing on large streaming datasets to improve ingestion and processing speed of that daat by 87%',
@@ -151,6 +161,20 @@ export default {
     },
     updateOverview(var1) {
       this.newOverview = var1;
+      this.open = false;
+    },
+    openExperience() {
+      this.openChange = 3;
+      this.open = !this.open;
+    },
+    updateExperience(var1, var2, var3, var4, var5, var6, var7) {
+      this.experience_title_name = var1;
+      this.experience_company_name = var2;
+      this.start_date = var3;
+      this.end_date = var4;
+      this.experience_role = var5;
+      this.experience_desc_one = var6;
+      this.experience_desc_two = var7;
       this.open = false;
     },
   },
@@ -202,7 +226,7 @@ hr {
   align-items: center;
   transform: translateY(-90vh);
   /* background: lightcoral; */
-  height: 60vh;
+  height: 75vh;
 }
 .header_resume_input {
   display: flex;

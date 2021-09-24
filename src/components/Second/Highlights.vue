@@ -9,15 +9,10 @@
     </div>
     <!-- Highlights Description -->
     <div class="heighlights_desc">
-      <ul class="heighlights_desc_ul" contenteditable="true">
-        <li>Result Oriented</li>
-        <li>Revenue Generation</li>
-        <li>Business Development</li>
-        <li>Effective Marketing</li>
-        <li>Organisational Capacity</li>
-        <li>Operability and commitement</li>
-        <li>Resistence to stress</li>
-        <li>Good Manners</li>
+      <ul class="heighlights_desc_ul">
+        <li v-for="(highList, index) in highlightListItem" :key="index">
+          {{ highList }}
+        </li>
       </ul>
     </div>
   </div>
@@ -25,10 +20,21 @@
 
 <script>
 export default {
-  props: ['title'],
+  props: ['title', 'highlightList'],
+  data() {
+    return {
+      highlightListItem: [],
+    };
+  },
   methods: {
     edit_highlight() {
       this.$emit('openHighlightEdit');
+    },
+  },
+  watch: {
+    highlightList() {
+      const myArr = this.highlightList.split(',');
+      this.highlightListItem.push(myArr);
     },
   },
 };

@@ -11,6 +11,17 @@
         v-model="title"
       />
     </div>
+    <!-- Highlights Input list -->
+    <div class="highlight_input_title flex_input">
+      <label for="list">Highlist List:</label>
+      <input
+        type="text"
+        name="list"
+        class="change_input"
+        autocomplete="off"
+        v-model="highlight_list"
+      />
+    </div>
     <!-- submit btn -->
     <div class="btn_flex">
       <button class="btn submit_btn" @click="submit_highlight()">Submit</button>
@@ -24,11 +35,13 @@ export default {
   data() {
     return {
       title: '',
+      highlight_list: '',
     };
   },
   methods: {
     submit_highlight() {
-      this.$emit('inputHighlight', this.title);
+      this.$emit('inputHighlight', this.title, this.highlight_list);
+      this.highlight_list = '';
     },
     close() {
       this.$emit('closeInput');

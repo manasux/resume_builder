@@ -44,6 +44,7 @@
                 <Highlights
                   @openHighlightEdit="openHighlight"
                   :title="highlight_title"
+                  :highlightList="highlight_list"
                 ></Highlights>
                 <Education></Education>
                 <Hobbies></Hobbies>
@@ -149,6 +150,7 @@ export default {
 
       // highlights
       highlight_title: 'Highlights',
+      highlight_list: '',
 
       // common
       openChange: 0,
@@ -199,8 +201,9 @@ export default {
       this.openChange = 4;
       this.open = !this.open;
     },
-    updateHighlight(var1) {
+    updateHighlight(var1, var2) {
       this.highlight_title = var1;
+      this.highlight_list = var2;
       this.open = !this.open;
     },
   },

@@ -10,7 +10,7 @@
     <!-- Highlights Description -->
     <div class="heighlights_desc">
       <ul class="heighlights_desc_ul">
-        <li v-for="(highList, index) in highlightListItem" :key="index">
+        <li v-for="(highList, index) in newArr" :key="index">
           {{ highList }}
         </li>
       </ul>
@@ -24,6 +24,7 @@ export default {
   data() {
     return {
       highlightListItem: [],
+      newArr: '',
     };
   },
   methods: {
@@ -33,8 +34,8 @@ export default {
   },
   watch: {
     highlightList() {
-      const myArr = this.highlightList.split(',');
-      this.highlightListItem.push(myArr);
+      this.newArr = this.highlightList.split(',');
+      // this.highlightListItem.push(myArr);
     },
   },
 };

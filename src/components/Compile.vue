@@ -41,7 +41,10 @@
               ></Experience>
               <!-- Right side of resume details -->
               <div class="second_part">
-                <Highlights></Highlights>
+                <Highlights
+                  @openHighlightEdit="openHighlight"
+                  :title="highlight_title"
+                ></Highlights>
                 <Education></Education>
                 <Hobbies></Hobbies>
               </div>
@@ -85,6 +88,16 @@
       ></ExperienceInput>
     </div>
   </div>
+
+  <!-- Highlight input -->
+  <div class="main_resume_input" v-if="openChange == 4 && open">
+    <div class="overview_resume_input">
+      <HighlightInput
+        @inputHighlight="updateHighlight"
+        @closeInput="closingInput"
+      ></HighlightInput>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -99,6 +112,7 @@ import FooterPart from './UI/FooterPart.vue';
 import HeaderInput from './Input/HeaderInput.vue';
 import OverviewInput from './Input/OverviewInput.vue';
 import ExperienceInput from './Input/ExperienceInput.vue';
+import HighlightInput from './Input/HighlightsInput.vue';
 
 export default {
   components: {
@@ -113,6 +127,7 @@ export default {
     HeaderInput,
     OverviewInput,
     ExperienceInput,
+    HighlightInput,
   },
   data() {
     return {
@@ -131,6 +146,9 @@ export default {
         'Utilized PySpark to distribute data processing on large streaming datasets to improve ingestion and processing speed of that daat by 87%',
       experience_desc_two:
         'Build basic ETL that ingested transactional and event data from a web app with 10,000 daily active users that saved over $85,000 annually in external vendor costs',
+
+      // highlights
+      highlight_title: 'Highlights',
 
       // common
       openChange: 0,
@@ -176,6 +194,14 @@ export default {
       this.experience_desc_one = var6;
       this.experience_desc_two = var7;
       this.open = false;
+    },
+    openHighlight() {
+      this.openChange = 4;
+      this.open = !this.open;
+    },
+    updateHighlight(var1) {
+      this.highlight_title = var1;
+      this.open = !this.open;
     },
   },
 };

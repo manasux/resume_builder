@@ -1,8 +1,11 @@
 <template>
   <div class="highlights">
+    <div @click="edit_highlight()" class="header_edit">
+      <button class="btn btn_change"><i class="fas fa-pen"></i></button>
+    </div>
     <!-- Highlights Title -->
     <div class="highlights_title">
-      <span contenteditable="true">Highlights</span>
+      <span>{{ title }}</span>
     </div>
     <!-- Highlights Description -->
     <div class="heighlights_desc">
@@ -21,7 +24,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ['title'],
+  methods: {
+    edit_highlight() {
+      this.$emit('openHighlightEdit');
+    },
+  },
+};
 </script>
 
 <style scoped>

@@ -2,7 +2,11 @@
   <div class="hobbies">
     <!-- Education Title -->
     <div class="hobbies_title">
-      <span contenteditable="true">Hobbies</span>
+      <span>{{ title }}</span>
+      <!-- submit btn -->
+      <div @click="edit_hobbie()" class="header_edit">
+        <button class="btn btn_change"><i class="fas fa-pen"></i></button>
+      </div>
     </div>
     <!-- Hobbies Description -->
     <div class="hobbies_desc">
@@ -16,7 +20,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ['title'],
+  methods: {
+    edit_hobbie() {
+      this.$emit('openHobbiesEdit');
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -26,6 +37,7 @@ export default {};
   font-size: 20px;
   font-family: var(--font);
   color: #cb570c;
+  display: flex;
 }
 .hobbies_desc {
   margin-left: 30px;

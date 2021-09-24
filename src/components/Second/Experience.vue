@@ -1,15 +1,14 @@
 <template>
   <div class="experience">
-    <!-- submit btn -->
-    <div @click="edit_exp()" class="header_edit">
-      <button class="btn btn_change"><i class="fas fa-pen"></i></button>
-    </div>
-    <!-- ------- -->
     <ul>
       <li class="experince_li">
         <!-- Experience Title -->
         <div class="experience_title">
           <span>{{ experienceTitleName }}</span>
+          <!-- submit btn -->
+          <div @click="edit_exp()" class="header_edit">
+            <button class="btn btn_change"><i class="fas fa-pen"></i></button>
+          </div>
         </div>
         <!-- Experience Description -->
         <div class="experience_desc">
@@ -75,6 +74,7 @@ export default {
   font-size: 20px;
   font-family: var(--font);
   color: #cb570c;
+  display: flex;
 }
 .experience_desc {
   margin-top: 10px;

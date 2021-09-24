@@ -54,7 +54,10 @@
                   :address="degree_add"
                   :gpa="degree_gpa"
                 ></Education>
-                <Hobbies></Hobbies>
+                <Hobbies
+                  @openHobbiesEdit="openHobbies"
+                  :title="hobbie_title"
+                ></Hobbies>
               </div>
             </div>
           </div>
@@ -116,6 +119,16 @@
       ></EducationInput>
     </div>
   </div>
+
+  <!-- Hobbies input -->
+  <div class="main_resume_input" v-if="openChange == 6 && open">
+    <div class="overview_resume_input">
+      <HobbieInput
+        @inputHobbie="updateHobbie"
+        @closeInput="closingInput"
+      ></HobbieInput>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -132,6 +145,7 @@ import OverviewInput from './Input/OverviewInput.vue';
 import ExperienceInput from './Input/ExperienceInput.vue';
 import HighlightInput from './Input/HighlightsInput.vue';
 import EducationInput from './Input/EducationInput.vue';
+import HobbieInput from './Input/HobbieInput.vue';
 
 export default {
   components: {
@@ -148,6 +162,7 @@ export default {
     ExperienceInput,
     HighlightInput,
     EducationInput,
+    HobbieInput,
   },
   data() {
     return {
@@ -177,6 +192,9 @@ export default {
       degree_uni: 'Kalasalingam Academy of Research and Education',
       degree_add: 'Virudhanagar, Tamilnadu, India',
       degree_gpa: ' 3.7',
+
+      // hobbies
+      hobbie_title: 'Hobbies',
 
       // common
       openChange: 0,
@@ -242,6 +260,14 @@ export default {
       this.degree_uni = var3;
       this.degree_add = var4;
       this.degree_gpa = var5;
+      this.open = !this.open;
+    },
+    openHobbies() {
+      this.openChange = 6;
+      this.open = !this.open;
+    },
+    updateHobbie(var1) {
+      this.hobbie_title = var1;
       this.open = !this.open;
     },
   },

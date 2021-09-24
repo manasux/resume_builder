@@ -46,7 +46,13 @@
                   :title="highlight_title"
                   :highlightList="highlight_list"
                 ></Highlights>
-                <Education></Education>
+                <Education
+                  :degree="degree_name"
+                  :course="degree_course"
+                  :university="degree_uni"
+                  :address="degree_add"
+                  :gpa="degree_gpa"
+                ></Education>
                 <Hobbies></Hobbies>
               </div>
             </div>
@@ -151,6 +157,13 @@ export default {
       // highlights
       highlight_title: 'Highlights',
       highlight_list: '',
+
+      // Education
+      degree_name: 'Bachelor of Science',
+      degree_course: 'Automotive Technology',
+      degree_uni: 'Kalasalingam Academy of Research and Education',
+      degree_add: 'Virudhanagar, Tamilnadu, India',
+      degree_gpa: ' 3.7',
 
       // common
       openChange: 0,

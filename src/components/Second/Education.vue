@@ -8,19 +8,15 @@
     <div class="education_desc">
       <ul class="education_desc_ul" contenteditable="true">
         <li>
-          <span class="education_desc_degree_name">Bachelor of Science,</span>
+          <span class="education_desc_degree_name">{{ degree }},</span>
           <br />
-          <span class="education_desc_course_name">Automotive Technology,</span>
+          <span class="education_desc_course_name">{{ course }},</span>
           <br />
-          <span class="education_desc_uni_name">
-            Kalasalingam Academy of Research and Education,
-          </span>
+          <span class="education_desc_uni_name"> {{ university }}, </span>
           <br />
-          <span class="education_desc_uni_place">
-            Virudhanagar, Tamilnadu, India,
-          </span>
+          <span class="education_desc_uni_place"> {{ address }}, </span>
           <br />
-          <span class="education_desc_uni_cgpa"> 3.7 GPA </span>
+          <span class="education_desc_uni_cgpa"> {{ gpa }} GPA </span>
           <br />
         </li>
       </ul>
@@ -29,7 +25,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ['degree', 'course', 'university', 'address', 'gpa'],
+};
 </script>
 
 <style scoped>

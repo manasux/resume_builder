@@ -19,6 +19,7 @@
         name="list"
         class="change_input"
         autocomplete="off"
+        placeholder="Add comma seperated highlight"
         v-model="highlight_list"
       />
     </div>

@@ -23,8 +23,14 @@ export default {
   props: ['title', 'highlightList'],
   data() {
     return {
-      highlightListItem: [],
-      newArr: '',
+      // highlightListItem: [],
+      newArr: [
+        'Result Oriented',
+        'Revenue Generation',
+        'Business Development',
+        'Effective Marketing',
+        'Organisational Capacity',
+      ],
     };
   },
   methods: {

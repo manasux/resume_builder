@@ -3,6 +3,9 @@
     <!-- Education Title -->
     <div class="education_title">
       <span contenteditable="true">Education</span>
+      <div @click="edit_edu()" class="header_edit">
+        <button class="btn btn_change"><i class="fas fa-pen"></i></button>
+      </div>
     </div>
     <!-- Education Description -->
     <div class="education_desc">
@@ -27,6 +30,11 @@
 <script>
 export default {
   props: ['degree', 'course', 'university', 'address', 'gpa'],
+  methods: {
+    edit_edu() {
+      this.$emit('openEduEdit');
+    },
+  },
 };
 </script>
 
@@ -37,6 +45,7 @@ export default {
   font-size: 20px;
   font-family: var(--font);
   color: #cb570c;
+  display: flex;
 }
 .education_desc {
   margin-left: 30px;

@@ -47,6 +47,7 @@
                   :highlightList="highlight_list"
                 ></Highlights>
                 <Education
+                  @openEduEdit="openEdcation"
                   :degree="degree_name"
                   :course="degree_course"
                   :university="degree_uni"
@@ -105,6 +106,16 @@
       ></HighlightInput>
     </div>
   </div>
+
+  <!-- Education input -->
+  <div class="main_resume_input" v-if="openChange == 5 && open">
+    <div class="overview_resume_input">
+      <EducationInput
+        @inputEducation="updateEducation"
+        @closeInput="closingInput"
+      ></EducationInput>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -120,6 +131,7 @@ import HeaderInput from './Input/HeaderInput.vue';
 import OverviewInput from './Input/OverviewInput.vue';
 import ExperienceInput from './Input/ExperienceInput.vue';
 import HighlightInput from './Input/HighlightsInput.vue';
+import EducationInput from './Input/EducationInput.vue';
 
 export default {
   components: {
@@ -135,6 +147,7 @@ export default {
     OverviewInput,
     ExperienceInput,
     HighlightInput,
+    EducationInput,
   },
   data() {
     return {
@@ -217,6 +230,18 @@ export default {
     updateHighlight(var1, var2) {
       this.highlight_title = var1;
       this.highlight_list = var2;
+      this.open = !this.open;
+    },
+    openEdcation() {
+      this.openChange = 5;
+      this.open = !this.open;
+    },
+    updateEducation(var1, var2, var3, var4, var5) {
+      this.degree_name = var1;
+      this.degree_course = var2;
+      this.degree_uni = var3;
+      this.degree_add = var4;
+      this.degree_gpa = var5;
       this.open = !this.open;
     },
   },

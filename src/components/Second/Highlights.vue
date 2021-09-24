@@ -10,8 +10,16 @@
     <!-- Highlights Description -->
     <div class="heighlights_desc">
       <ul class="heighlights_desc_ul">
-        <li v-for="(highList, index) in newArr" :key="index">
+        <li
+          v-for="(highList, index) in newArr"
+          :key="index"
+          contenteditable="true"
+          class="flex_list"
+        >
           {{ highList }}
+          <div @click="delete_item(index)" class="header_edit">
+            <button class="btn btn_change"><i class="fas fa-trash"></i></button>
+          </div>
         </li>
       </ul>
     </div>
@@ -37,6 +45,9 @@ export default {
     edit_highlight() {
       this.$emit('openHighlightEdit');
     },
+    delete_item(index) {
+      this.newArr.splice(index, 1);
+    },
   },
   watch: {
     highlightList() {
@@ -48,6 +59,9 @@ export default {
 </script>
 
 <style scoped>
+.flex_list {
+  display: flex;
+}
 .highlights {
   height: auto;
   width: 100%;

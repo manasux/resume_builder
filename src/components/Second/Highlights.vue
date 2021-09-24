@@ -1,11 +1,11 @@
 <template>
   <div class="highlights">
-    <div @click="edit_highlight()" class="header_edit">
-      <button class="btn btn_change"><i class="fas fa-pen"></i></button>
-    </div>
     <!-- Highlights Title -->
     <div class="highlights_title">
       <span>{{ title }}</span>
+      <div @click="edit_highlight()" class="header_edit">
+        <button class="btn btn_change"><i class="fas fa-pen"></i></button>
+      </div>
     </div>
     <!-- Highlights Description -->
     <div class="heighlights_desc">
@@ -72,6 +72,7 @@ export default {
   font-size: 20px;
   font-family: var(--font);
   color: #cb570c;
+  display: flex;
 }
 .heighlights_desc {
   margin-top: 10px;

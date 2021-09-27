@@ -5,7 +5,9 @@
       <span>{{ title }}</span>
       <!-- submit btn -->
       <div @click="edit_hobbie()" class="header_edit">
-        <button class="btn btn_change"><i class="fas fa-pen"></i></button>
+        <button v-if="btnClose" class="btn btn_change">
+          <i class="fas fa-pen"></i>
+        </button>
       </div>
     </div>
     <!-- Hobbies Description -->
@@ -14,7 +16,9 @@
         <li v-for="(hobbie, index) in newArr" :key="index" class="flex_list">
           {{ hobbie }}
           <div @click="delete_item(index)" class="header_edit">
-            <button class="btn btn_change"><i class="fas fa-trash"></i></button>
+            <button v-if="btnClose" class="btn btn_change">
+              <i class="fas fa-trash"></i>
+            </button>
           </div>
         </li>
       </ul>
@@ -24,7 +28,7 @@
 
 <script>
 export default {
-  props: ['title', 'hobbieList'],
+  props: ['title', 'hobbieList', 'btnClose'],
   data() {
     return {
       newArr: ['Playing cricket', 'Reading books', 'Listening Music'],

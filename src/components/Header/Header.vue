@@ -4,7 +4,9 @@
     <div class="name">
       <span class="name_second"> {{ name }} </span>
       <div @click="edit_name()" class="header_edit">
-        <button class="btn btn_change"><i class="fas fa-pen"></i></button>
+        <button v-if="btnClose" class="btn btn_change">
+          <i class="fas fa-pen"></i>
+        </button>
       </div>
     </div>
     <!-- phone number -->
@@ -20,7 +22,7 @@
 
 <script>
 export default {
-  props: ['name', 'contact', 'email'],
+  props: ['name', 'contact', 'email', 'btnClose'],
   methods: {
     edit_name() {
       this.$emit('openHeaderEdit');

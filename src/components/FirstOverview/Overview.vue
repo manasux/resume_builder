@@ -4,14 +4,14 @@
       {{ overview }}
     </span>
   </div>
-  <div @click="edit_overview()" class="header_edit">
+  <div v-if="btnClose" @click="edit_overview()" class="header_edit">
     <button class="btn btn_change"><i class="fas fa-pen"></i></button>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['overview'],
+  props: ['overview', 'btnClose'],
   emits: ['openOverviewEdit'],
   methods: {
     edit_overview() {

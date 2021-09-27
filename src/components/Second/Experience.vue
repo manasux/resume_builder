@@ -6,7 +6,7 @@
         <div class="experience_title">
           <span>{{ experienceTitleName }}</span>
           <!-- submit btn -->
-          <div @click="edit_exp()" class="header_edit">
+          <div v-if="btnClose" @click="edit_exp()" class="header_edit">
             <button class="btn btn_change"><i class="fas fa-pen"></i></button>
           </div>
         </div>
@@ -50,6 +50,7 @@ export default {
     'experienceRole',
     'experienceDescOne',
     'experinceDescTwo',
+    'btnClose',
   ],
   methods: {
     edit_exp() {

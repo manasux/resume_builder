@@ -16,6 +16,7 @@
                 :name="newName"
                 :contact="newContact"
                 :email="newEmail"
+                :btnClose="btn_close"
               ></Header>
             </div>
             <!-- First Overview -->
@@ -24,6 +25,7 @@
               <Overview
                 @openOverviewEdit="openOverview"
                 :overview="newOverview"
+                :btnClose="btn_close"
               ></Overview>
             </div>
             <hr />
@@ -38,6 +40,7 @@
                 :experienceRole="experience_role"
                 :experienceDescOne="experience_desc_one"
                 :experinceDescTwo="experience_desc_two"
+                :btnClose="btn_close"
               ></Experience>
               <!-- Right side of resume details -->
               <div class="second_part">
@@ -45,6 +48,7 @@
                   @openHighlightEdit="openHighlight"
                   :title="highlight_title"
                   :highlightList="highlight_list"
+                  :btnClose="btn_close"
                 ></Highlights>
                 <Education
                   @openEduEdit="openEdcation"
@@ -53,11 +57,13 @@
                   :university="degree_uni"
                   :address="degree_add"
                   :gpa="degree_gpa"
+                  :btnClose="btn_close"
                 ></Education>
                 <Hobbies
                   @openHobbiesEdit="openHobbies"
                   :title="hobbie_title"
                   :hobbieList="hobbie_list"
+                  :btnClose="btn_close"
                 ></Hobbies>
               </div>
             </div>
@@ -167,6 +173,7 @@ export default {
   },
   data() {
     return {
+      btn_close: true,
       newName: 'Manas Mishra',
       newContact: '6202286832',
       newEmail: 'mk1316a@gmail.com',
@@ -205,7 +212,7 @@ export default {
   },
   methods: {
     changeT() {
-      var list = document.getElementsByTagName('i');
+      this.btn_close = false;
       var element = document.getElementById('convert');
       html2pdf(element);
     },

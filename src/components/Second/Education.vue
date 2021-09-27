@@ -4,7 +4,9 @@
     <div class="education_title">
       <span contenteditable="true">Education</span>
       <div @click="edit_edu()" class="header_edit">
-        <button class="btn btn_change"><i class="fas fa-pen"></i></button>
+        <button v-if="btnClose" class="btn btn_change">
+          <i class="fas fa-pen"></i>
+        </button>
       </div>
     </div>
     <!-- Education Description -->
@@ -29,7 +31,7 @@
 
 <script>
 export default {
-  props: ['degree', 'course', 'university', 'address', 'gpa'],
+  props: ['degree', 'course', 'university', 'address', 'gpa', 'btnClose'],
   methods: {
     edit_edu() {
       this.$emit('openEduEdit');

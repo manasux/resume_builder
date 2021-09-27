@@ -4,7 +4,9 @@
     <div class="highlights_title">
       <span>{{ title }}</span>
       <div @click="edit_highlight()" class="header_edit">
-        <button class="btn btn_change"><i class="fas fa-pen"></i></button>
+        <button v-if="btnClose" class="btn btn_change">
+          <i class="fas fa-pen"></i>
+        </button>
       </div>
     </div>
     <!-- Highlights Description -->
@@ -17,7 +19,7 @@
           class="flex_list"
         >
           {{ highList }}
-          <div @click="delete_item(index)" class="header_edit">
+          <div v-if="btnClose" @click="delete_item(index)" class="header_edit">
             <button class="btn btn_change"><i class="fas fa-trash"></i></button>
           </div>
         </li>
@@ -28,7 +30,7 @@
 
 <script>
 export default {
-  props: ['title', 'highlightList'],
+  props: ['title', 'highlightList', 'btnClose'],
   data() {
     return {
       // highlightListItem: [],

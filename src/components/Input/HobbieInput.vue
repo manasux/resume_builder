@@ -11,6 +11,19 @@
         v-model="title"
       />
     </div>
+    <!-- Highlights Input list -->
+    <div class="hobbies_input_title flex_input">
+      <label for="list">Hobbies List:</label>
+      <input
+        type="text"
+        name="list"
+        class="change_input"
+        autocomplete="off"
+        placeholder="Add comma seperated highlight"
+        v-model="hobbies_list"
+      />
+    </div>
+    <!-- submit btn -->
     <!-- submit btn -->
     <div class="btn_flex">
       <button class="btn submit_btn" @click="submit_hobbies()">Submit</button>
@@ -24,12 +37,13 @@ export default {
   data() {
     return {
       title: '',
+      hobbies_list: '',
     };
   },
   methods: {
     submit_hobbies() {
-      this.$emit('inputHobbie', this.title);
-      // this.highlight_list = '';
+      this.$emit('inputHobbie', this.title, this.hobbies_list);
+      this.hobbies_list = '';
     },
     close() {
       this.$emit('closeInput');

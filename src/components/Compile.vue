@@ -57,6 +57,7 @@
                 <Hobbies
                   @openHobbiesEdit="openHobbies"
                   :title="hobbie_title"
+                  :hobbieList="hobbie_list"
                 ></Hobbies>
               </div>
             </div>
@@ -195,6 +196,7 @@ export default {
 
       // hobbies
       hobbie_title: 'Hobbies',
+      hobbie_list: '',
 
       // common
       openChange: 0,
@@ -203,6 +205,7 @@ export default {
   },
   methods: {
     changeT() {
+      var list = document.getElementsByTagName('i');
       var element = document.getElementById('convert');
       html2pdf(element);
     },
@@ -266,8 +269,9 @@ export default {
       this.openChange = 6;
       this.open = !this.open;
     },
-    updateHobbie(var1) {
+    updateHobbie(var1, var2) {
       this.hobbie_title = var1;
+      this.hobbie_list = var2;
       this.open = !this.open;
     },
   },

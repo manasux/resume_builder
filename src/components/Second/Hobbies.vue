@@ -11,9 +11,12 @@
     <!-- Hobbies Description -->
     <div class="hobbies_desc">
       <ul class="hobbies_desc_ul" contenteditable="true">
-        <li>Playing Chess</li>
-        <li>Reading books</li>
-        <li>Listening Music</li>
+        <li v-for="(hobbie, index) in newArr" :key="index" class="flex_list">
+          {{ hobbie }}
+          <div @click="delete_item(index)" class="header_edit">
+            <button class="btn btn_change"><i class="fas fa-trash"></i></button>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -21,16 +24,36 @@
 
 <script>
 export default {
-  props: ['title'],
+  props: ['title', 'hobbieList'],
+  data() {
+    return {
+      newArr: ['Playing cricket', 'Reading books', 'Listening Music'],
+    };
+  },
   methods: {
     edit_hobbie() {
       this.$emit('openHobbiesEdit');
+    },
+    delete_item(index) {
+      this.newArr.splice(index, 1);
+    },
+  },
+  watch: {
+    hobbieList() {
+      this.newArr = this.hobbieList.split(',');
     },
   },
 };
 </script>
 
 <style scoped>
+.flex_list {
+  display: flex;
+}
+.hobbies {
+  height: auto;
+  width: 100%;
+}
 .hobbies_title {
   margin-top: 30px;
   margin-left: 30px;
@@ -40,14 +63,11 @@ export default {
   display: flex;
 }
 .hobbies_desc {
-  margin-left: 30px;
   margin-top: 10px;
-}
-.hobbies_desc_ul {
+  margin-left: 30px;
   font-family: var(--font_sans);
 }
 .hobbies_desc_ul > li {
-  color: #333;
-  font-size: 14px;
+  font-size: 15px;
 }
 </style>
